@@ -1,0 +1,16 @@
+root@PPNVService:~# humansd tx slashing unjail --broadcast-mode=block --from PPNV --gas=500000 -y --chain-id humans_3000-23
+Enter keyring passphrase:
+code: 19
+codespace: sdk
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: ""
+timestamp: ""
+tx: null
+txhash: 2BC6DB1F4D047098D419DF0A4B6BC993763B0A11FA570E62766BE20EE98B726F
+root@PPNVService:~# 
