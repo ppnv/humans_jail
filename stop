@@ -1,0 +1,11 @@
+root@PPNVService:~# systemctl stop humansd && journalctl -fu humansd -ocat
+11:35AM INF service stop impl={"Logger":{},"Switch":{"Logger":{}}} module=statesync msg={} server=node
+11:35AM INF service stop impl={"Logger":{},"Switch":{"Logger":{}}} module=pex msg={} server=node
+11:35AM INF service stop book=/root/.humansd/config/addrbook.json impl={"Logger":{}} module=p2p msg={} server=node
+11:35AM INF Saving AddrBook to file book=/root/.humansd/config/addrbook.json module=p2p server=node size=120
+11:35AM INF Closing rpc listener listener={"Listener":{}} server=node
+11:35AM ERR Stopped accept routine, as transport is closed module=p2p numPeers=0 server=node
+11:35AM INF RPC HTTP server stopped err="accept tcp [::]:29657: use of closed network connection" module=rpc-server server=node
+11:35AM ERR Error serving server err="accept tcp [::]:29657: use of closed network connection" server=node
+humansd.service: Succeeded.
+Stopped humansd.
