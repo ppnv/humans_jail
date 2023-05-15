@@ -1,0 +1,33 @@
+humansd tx slashing unjail --broadcast-mode=block --from PPNV --gas=500000 -y --chain-id humans_3000-23
+code: 4
+codespace: slashing
+data: ""
+events:
+- attributes:
+  - index: true
+    key: ZmVl
+    value: MGFoZWFydA==
+  - index: true
+    key: ZmVlX3BheWVy
+    value: aHVtYW4xZnpwbGR0ampkZHBodW54ZG5wYzB1ZXp0MGY4cnF2ODZsc3R0dGs=
+  type: tx
+- attributes:
+  - index: true
+    key: YWNjX3NlcQ==
+    value: aHVtYW4xZnpwbGR0ampkZHBodW54ZG5wYzB1ZXp0MGY4cnF2ODZsc3R0dGsvMQ==
+  type: tx
+- attributes:
+  - index: true
+    key: c2lnbmF0dXJl
+    value: d1VJMEwybzloRllrdFlhZ2NTV0d6bkQ3aW9FdEtwSFl0dGljQ0FreTlmbGo4K3JCQUVGa1NPenpCMmMreW04VnozSDVkS005K3BEVkYxNERLWmNMMEFFPQ==
+  type: tx
+gas_used: "78427"
+gas_wanted: "500000"
+height: "57156"
+info: ""
+logs: []
+raw_log: 'failed to execute message; message index: 0: validator still jailed; cannot
+  be unjailed'
+timestamp: ""
+tx: null
+txhash: D5C4626A2B2BD6922C1B03BB8E20277EB38C662A7E1F174FFBEA707035225330
