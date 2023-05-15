@@ -1,0 +1,94 @@
+root@PPNVService:~# systemctl restart humansd && journalctl -fu humansd -ocat
+11:35AM INF service stop impl={"Logger":{},"Switch":{"Logger":{}}} module=pex msg={} server=node
+11:35AM INF service stop book=/root/.humansd/config/addrbook.json impl={"Logger":{}} module=p2p msg={} server=node
+11:35AM INF Saving AddrBook to file book=/root/.humansd/config/addrbook.json module=p2p server=node size=120
+11:35AM INF Closing rpc listener listener={"Listener":{}} server=node
+11:35AM ERR Stopped accept routine, as transport is closed module=p2p numPeers=0 server=node
+11:35AM INF RPC HTTP server stopped err="accept tcp [::]:29657: use of closed network connection" module=rpc-server server=node
+11:35AM ERR Error serving server err="accept tcp [::]:29657: use of closed network connection" server=node
+humansd.service: Succeeded.
+Stopped humansd.
+Started humansd.
+11:54AM INF Unlocking keyring
+11:54AM INF starting ABCI with Tendermint
+11:54AM INF starting node with ABCI Tendermint in-process
+11:54AM INF service start impl=multiAppConn module=proxy msg={} server=node
+11:54AM INF service start connection=query impl=localClient module=abci-client msg={} server=node
+11:54AM INF service start connection=snapshot impl=localClient module=abci-client msg={} server=node
+11:54AM INF service start connection=mempool impl=localClient module=abci-client msg={} server=node
+11:54AM INF service start connection=consensus impl=localClient module=abci-client msg={} server=node
+11:54AM INF service start impl=EventBus module=events msg={} server=node
+11:54AM INF service start impl=PubSub module=pubsub msg={} server=node
+11:54AM INF service start impl=IndexerService module=txindex msg={} server=node
+11:54AM INF ABCI Handshake App Info hash="����\x17_��Z9�*}w!'��9�F�D\x10����\x1e5\x1a\x0e" height=56939 module=consensus protocol-version=0 server=node software-version=0.2.1
+11:54AM INF ABCI Replay Blocks appHeight=56939 module=consensus server=node stateHeight=56939 storeHeight=56939
+11:54AM INF Completed ABCI Handshake - CometBFT and App are synced appHash="����\x17_��Z9�*}w!'��9�F�D\x10����\x1e5\x1a\x0e" appHeight=56939 module=consensus server=node
+11:54AM INF Version info abci=0.17.0 block=11 cmtbft_version=0.34.27 commit_hash= p2p=8 server=node
+11:54AM INF This node is a validator addr=AD9BBD93A135CFCFE006F8E6865657D1D41FF610 module=consensus pubKey=TTvx8wlpvrsOXGlrZ18+8Www1t+kox4Y3cR4V+6VLes= server=node
+11:54AM INF P2P Node ID ID=472b0929af7396ea69be9d008d125f853a0e8314 file=/root/.humansd/config/node_key.json module=p2p server=node
+11:54AM INF Adding persistent peers addrs=["4762fa22edb91acd78010026f8da5fb71e174acb@142.165.207.19:36656","2ce2d45c4e434ceb2a0a662549a629e08c53a106@65.109.84.103:26656","2f6cc8b0b255745d71c358351ddde1faa350b0be@95.217.200.36:26656","b9767aa2312748caaf67425890768d85186b69b1@5.9.87.205:26656","49f2ffa9786690548a1094b620d869ed72a33f8c@141.95.99.214:26656","b1639fb460c9f55bb3acc3006df64ac5013f1412@91.194.30.203:26656","a41f29c2d498b232c18f75364e38cee06fac198d@78.46.64.59:26656","62fff57f15d7ba6fb8aecb9ae93ea58dd3cefea8@85.239.240.45:26656","8e32537f2f77dfeb1b5834340a30e6750c4f88c2@81.30.157.35:26656","df5cb643d8aeade8ef288a3dd90e4fd8220954ba@162.55.243.211:26656","fa9eb901a01430d928e71162151992c7afb51d62@178.23.126.70:26656","eb68fd2f20d58a6f8ab68e7a0fea7d5abe311f16@118.193.37.229:26656","de3cd5f6c726935c4c0fdb1e6bd5b705074c637c@144.76.45.59:26656","2b3421d3432361846e77bdeb97d06e2b178a4be3@129.213.108.20:26656","5ca0389db000da1ce87d992816a4aefa387c3998@143.110.190.223:26656","946b549550e9c564193bf4c963d84b17e5415a50@136.243.136.241:26656","8855d5696c4aec427051bd2ed3262e7e3a37f34d@202.61.236.219:26656","19230fad7145e6fe80566a72f66b9ca3ec3f04d5@212.47.234.144:26656","e52c69f28b78513cf65c882effc28cd288476504@172.104.76.251:26656","5b92ede5e88c5029d6c7b3b360b9cf59051ce409@65.109.84.33:26656","ceba57f1376d4949cc0419918d110f0085b24b25@135.181.113.225:26656","dd531a4634ba06ceea5ac37f883cbc3bf1dd4556@46.4.23.42:26656","be5158df5152ec7e6a4eca04c89e40494d19927c@51.79.101.159:26656","ee8a0664518c5ef5078ad2251275d5689fcf96fb@159.69.69.183:26656","c47471d15b4cd8974624b01b71b3058c3ece4679@65.109.92.235:26656","472b0929af7396ea69be9d008d125f853a0e8314@65.108.224.156:26656","6c2581bce457207a8d29895216a06f0f98d39599@38.146.3.209:26656","b77d993ac7b7e71a788284a7eff017d08711e1bb@51.79.82.138:26656","e6489cf86b51fa37cae968ccbbda1da03b742a5e@128.140.56.206:26656","497886715ac23475f7428bd177b9fa53ff886a8d@78.46.80.79:26656","1a60894ec05fa5a92de5aef237dc3ed729912788@65.108.71.140:26656","e49d3e4c98391de50f06d9fb7e61dffbf340d058@85.239.233.20:26656","733ffab95701aeebbc3021e827a7ef5f5c0dd93c@144.76.97.35:26656","b1f13e9971cfdcf784fb0efbd1b72417d5410a02@195.201.59.194:26656","6271d80b8fc42da3a2825cc5ef75818dd52423d1@138.201.121.185:26656","42f95015c31c7814b6a0a717fd8c63d15f896e88@94.237.27.19:26656","5e1f23a66fafd1a73871f055a6dd2165c01fe1c2@65.109.25.62:26656","d7eb0e65cecbeeaa649b0a2fdf95ca2fb9f0cc3e@206.125.33.0:26656","aab53138456cdcdd2eb9bc4d28e34146eeac6268@135.181.138.160:26656","36f956fa2fe317a5d3163d0b6c7b104e33aa62e9@103.180.28.79:26656","bf99f84b1674f87ffe95972f332cb218d1253b9c@65.108.72.253:26656","02b9f1ce4363ef45bb02065b06c790669fd2fd6c@37.27.6.149:12256","0ae23e03040dd3e3a6c3a2326c62a206f531d671@162.19.31.150:26656","417089d6681abacc685c2eff9e029d85231a04a0@141.95.34.193:46656","f05366147458d2d09ff525f8b4258a7978f72991@162.55.173.57:26656","459bcaea161d20cddcdead811d282bd495446cbb@135.181.142.117:26656","c467f8c292dbbebc654c8429956d15f09eb38a1d@65.109.13.83:26656","b9c1f8437819fa735c805dcbff8e149a2222d76c@3.22.177.64:26656","35ad999115e2a58540f6cf3bc3b90cc3adc9debc@65.109.116.95:26656","22ccc03acda4e7230f779dc3955a0097a32c358e@69.197.6.24:26656"] module=p2p server=node
+11:54AM INF Adding unconditional peer ids ids=[] module=p2p server=node
+11:54AM INF Add our address to book addr={"id":"472b0929af7396ea69be9d008d125f853a0e8314","ip":"0.0.0.0","port":29656} book=/root/.humansd/config/addrbook.json module=p2p server=node
+11:54AM INF service start impl=Node msg={} server=node
+11:54AM INF Starting pprof server laddr=localhost:29060 server=node
+11:54AM INF service start impl="P2P Switch" module=p2p msg={} server=node
+11:54AM INF service start impl=BlockchainReactor module=blockchain msg={} server=node
+11:54AM INF service start impl=BlockPool module=blockchain msg={} server=node
+11:54AM INF serve module=rpc-server msg={} server=node
+11:54AM INF service start impl=ConsensusReactor module=consensus msg={} server=node
+11:54AM INF Reactor  module=consensus server=node waitSync=true
+11:54AM INF service start impl=Evidence module=evidence msg={} server=node
+11:54AM INF service start impl=StateSync module=statesync msg={} server=node
+11:54AM INF service start impl=PEX module=pex msg={} server=node
+11:54AM INF service start book=/root/.humansd/config/addrbook.json impl=AddrBook module=p2p msg={} server=node
+11:54AM INF Saving AddrBook to file book=/root/.humansd/config/addrbook.json module=p2p server=node size=120
+11:54AM INF Ensure peers module=pex numDialing=0 numInPeers=0 numOutPeers=0 numToDial=10 server=node
+11:54AM INF service start impl="Peer{MConn{135.181.113.225:26656} ceba57f1376d4949cc0419918d110f0085b24b25 out}" module=p2p msg={} peer={"id":"ceba57f1376d4949cc0419918d110f0085b24b25","ip":"135.181.113.225","port":26656} server=node
+11:54AM INF service start impl=MConn{135.181.113.225:26656} module=p2p msg={} peer={"id":"ceba57f1376d4949cc0419918d110f0085b24b25","ip":"135.181.113.225","port":26656} server=node
+11:54AM INF service start impl="Peer{MConn{65.108.72.253:26656} bf99f84b1674f87ffe95972f332cb218d1253b9c out}" module=p2p msg={} peer={"id":"bf99f84b1674f87ffe95972f332cb218d1253b9c","ip":"65.108.72.253","port":26656} server=node
+11:54AM INF service start impl=MConn{65.108.72.253:26656} module=p2p msg={} peer={"id":"bf99f84b1674f87ffe95972f332cb218d1253b9c","ip":"65.108.72.253","port":26656} server=node
+11:54AM INF service start impl="Peer{MConn{95.217.200.36:26656} 2f6cc8b0b255745d71c358351ddde1faa350b0be out}" module=p2p msg={} peer={"id":"2f6cc8b0b255745d71c358351ddde1faa350b0be","ip":"95.217.200.36","port":26656} server=node
+11:54AM INF service start impl=MConn{95.217.200.36:26656} module=p2p msg={} peer={"id":"2f6cc8b0b255745d71c358351ddde1faa350b0be","ip":"95.217.200.36","port":26656} server=node
+11:54AM INF service start impl="Peer{MConn{65.109.116.95:26656} 35ad999115e2a58540f6cf3bc3b90cc3adc9debc out}" module=p2p msg={} peer={"id":"35ad999115e2a58540f6cf3bc3b90cc3adc9debc","ip":"65.109.116.95","port":26656} server=node
+11:54AM INF service start impl=MConn{65.109.116.95:26656} module=p2p msg={} peer={"id":"35ad999115e2a58540f6cf3bc3b90cc3adc9debc","ip":"65.109.116.95","port":26656} server=node
+11:54AM INF service start impl="Peer{MConn{65.21.200.54:26656} 907cb9da5d7d7182a80a6e38aad59bd067059bb3 out}" module=p2p msg={} peer={"id":"907cb9da5d7d7182a80a6e38aad59bd067059bb3","ip":"65.21.200.54","port":26656} server=node
+11:54AM INF service start impl=MConn{65.21.200.54:26656} module=p2p msg={} peer={"id":"907cb9da5d7d7182a80a6e38aad59bd067059bb3","ip":"65.21.200.54","port":26656} server=node
+11:54AM INF service start impl="Peer{MConn{144.76.97.35:26656} 733ffab95701aeebbc3021e827a7ef5f5c0dd93c out}" module=p2p msg={} peer={"id":"733ffab95701aeebbc3021e827a7ef5f5c0dd93c","ip":"144.76.97.35","port":26656} server=node
+11:54AM INF service start impl=MConn{144.76.97.35:26656} module=p2p msg={} peer={"id":"733ffab95701aeebbc3021e827a7ef5f5c0dd93c","ip":"144.76.97.35","port":26656} server=node
+11:54AM INF serve msg={} server=api
+11:54AM INF service start impl="Peer{MConn{69.197.6.24:26656} 22ccc03acda4e7230f779dc3955a0097a32c358e out}" module=p2p msg={} peer={"id":"22ccc03acda4e7230f779dc3955a0097a32c358e","ip":"69.197.6.24","port":26656} server=node
+11:54AM INF service start impl=MConn{69.197.6.24:26656} module=p2p msg={} peer={"id":"22ccc03acda4e7230f779dc3955a0097a32c358e","ip":"69.197.6.24","port":26656} server=node11:54AM INF service start impl="Peer{MConn{37.27.6.149:12256} 02b9f1ce4363ef45bb02065b06c790669fd2fd6c out}" module=p2p msg={} peer={"id":"02b9f1ce4363ef45bb02065b06c790669fd2fd6c","ip":"37.27.6.149","port":12256} server=node
+11:54AM INF service start impl=MConn{37.27.6.149:12256} module=p2p msg={} peer={"id":"02b9f1ce4363ef45bb02065b06c790669fd2fd6c","ip":"37.27.6.149","port":12256} server=node11:54AM INF executed block height=56940 module=state num_invalid_txs=0 num_valid_txs=0 server=node
+11:54AM INF commit synced commit=436F6D6D697449447B5B31363920313035203131382031323920313836203134392034312031373820313030203233322032323320323039203234302033392038203420313237203131382031373120383420323033203738203432203132322037382039382035382031343020323531203136203330203138335D3A444536437D
+11:54AM INF committed state app_hash=A9697681BA9529B264E8DFD1F02708047F76AB54CB4E2A7A4E623A8CFB101EB7 height=56940 module=state num_txs=0 server=node
+11:54AM INF indexed block exents height=56940 module=txindex server=node
+11:54AM INF executed block height=56941 module=state num_invalid_txs=0 num_valid_txs=0 server=node
+11:54AM INF commit synced commit=436F6D6D697449447B5B3132302033203634203735203233342034342034372036382031313320343320323132203233382031353620373520313639203233203137352037392032353320323432203235312035302031353420343620393520323033203435203233342038352031333820323533203232305D3A444536447D
+11:54AM INF committed state app_hash=7803404BEA2C2F44712BD4EE9C4BA917AF4FFDF2FB329A2E5FCB2DEA558AFDDC height=56941 module=state num_txs=0 server=node
+11:54AM INF indexed block exents height=56941 module=txindex server=node
+11:54AM INF executed block height=56942 module=state num_invalid_txs=0 num_valid_txs=0 server=node
+11:54AM INF commit synced commit=436F6D6D697449447B5B35203638203935203130322031343920323334203230322031353120313437203130372030203937203839203239203131302032333620313236203232372032353220313730203135352032333420323533203934203131203434203131312031303020313933203230372035362034315D3A444536457D
+11:54AM INF committed state app_hash=05445F6695EACA97936B0061591D6EEC7EE3FCAA9BEAFD5E0B2C6F64C1CF3829 height=56942 module=state num_txs=0 server=node
+11:54AM INF service start impl="Peer{MConn{38.146.3.209:26656} 6c2581bce457207a8d29895216a06f0f98d39599 out}" module=p2p msg={} peer={"id":"6c2581bce457207a8d29895216a06f0f98d39599","ip":"38.146.3.209","port":26656} server=node
+11:54AM INF service start impl=MConn{38.146.3.209:26656} module=p2p msg={} peer={"id":"6c2581bce457207a8d29895216a06f0f98d39599","ip":"38.146.3.209","port":26656} server=node
+11:54AM INF indexed block exents height=56942 module=txindex server=node
+11:54AM INF executed block height=56943 module=state num_invalid_txs=0 num_valid_txs=0 server=node
+11:54AM INF commit synced commit=436F6D6D697449447B5B33302032333020343620313236203139332032333320313730203438203239203630203132352039382032353120312032303620313330203138352033352034382032203832203230332031343920363720353120313432203233322031333520313032203138203236203135395D3A444536467D
+11:54AM INF committed state app_hash=1EE62E7EC1E9AA301D3C7D62FB01CE82B923300252CB9543338EE88766121A9F height=56943 module=state num_txs=0 server=node
+11:54AM INF indexed block exents height=56943 module=txindex server=node
+11:54AM INF executed block height=56944 module=state num_invalid_txs=0 num_valid_txs=0 server=node
+11:54AM INF commit synced commit=436F6D6D697449447B5B323339203136362031353420313237203634203138322032313520313731203231352036362031373920323434203137362032333820373920343720322035322032333120313836203138322031353420313231203835203137322038302032343020323134203131302032333020313837203233325D3A444537307D
+11:54AM INF committed state app_hash=EFA69A7F40B6D7ABD742B3F4B0EE4F2F0234E7BAB69A7955AC50F0D66EE6BBE8 height=56944 module=state num_txs=0 server=node
+11:54AM INF indexed block exents height=56944 module=txindex server=node
+11:54AM INF executed block height=56945 module=state num_invalid_txs=0 num_valid_txs=0 server=node
+11:54AM INF commit synced commit=436F6D6D697449447B5B3420313139203438203133302037342039382031303320313634203230322032313520313535203138203136382032323120323036203230302034382032303120333120373620313531203135342032333020313330203233382031333620343920323338203633203639203539203138345D3A444537317D
+11:54AM INF committed state app_hash=047730824A6267A4CAD79B12A8DDCEC830C91F4C979AE682EE8831EE3F453BB8 height=56945 module=state num_txs=0 server=node
+11:54AM INF indexed block exents height=56945 module=txindex server=node
+
+........
+
+
+
+11:55AM INF finalizing commit of block hash={} height=57124 module=consensus num_txs=0 root=6080B6C70AC3A2AD2ADCF50CDD5FB82AA6CFD2C1BA258397AA259EBB3B1A6100 server=node
+11:55AM INF executed block height=57124 module=state num_invalid_txs=0 num_valid_txs=0 server=node
+11:55AM INF commit synced commit=436F6D6D697449447B5B31353920313938203130312031393620323237203233372031313620313632203133372031343620323330203138342036322033332032313920373320313437203139322039203234302031343220343920323437203133332031333620313939203138342031343520323134203136392032372039315D3A444632347D
