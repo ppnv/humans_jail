@@ -1,0 +1,26 @@
+root@PPNVService:~# humansd q staking validator $(humansd keys show PPNV --bech val -a) --node https://humans-testnet.rpc.kjnodes.com:443
+Enter keyring passphrase:
+commission:
+  commission_rates:
+    max_change_rate: "0.010000000000000000"
+    max_rate: "0.200000000000000000"
+    rate: "0.050000000000000000"
+  update_time: "2023-05-11T09:00:00Z"
+consensus_pubkey:
+  '@type': /cosmos.crypto.ed25519.PubKey
+  key: TTvx8wlpvrsOXGlrZ18+8Www1t+kox4Y3cR4V+6VLes=
+delegator_shares: "1000000000000000000.000000000000000000"
+description:
+  details: Professional team Proof of Stake Network Validators ✅
+  identity: 862C5270EE4D7EB6
+  moniker: ⭐️ PPNV Service ⭐️
+  security_contact: ""
+  website: https://ppnv.space
+jailed: true
+min_self_delegation: "1"
+operator_address: humanvaloper1fzpldtjjddphunxdnpc0uezt0f8rqv86nr3yqn
+status: BOND_STATUS_UNBONDING
+tokens: "1000000000000000000"
+unbonding_height: "57091"
+unbonding_time: "2023-05-29T09:52:15.279419826Z"
+root@PPNVService:~# 
